@@ -1,4 +1,11 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }]
+  "functions": {
+    "api/index.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "installCommand": "yum install -js python3 && npm install",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
 }
-
